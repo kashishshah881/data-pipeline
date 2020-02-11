@@ -11,13 +11,13 @@ The aim of the project is to create a data pipeline for scraping and computing t
 3. Apache beam and NLTK tokenizer was used for tokenizing these files.
 4. The model was implemented in two phases, one on the local system using default runner,Direct Runner and the other on the google cloud platform using DataFlow runner.
 5. The data has been treated as batch data (since apache beam can accomodate both batch and stream data) which was stored in the PCollections and then used Trandform function of teh Apache beam for manipulation. 
-6. The words were mapped as negative, positive, litigious, uncertain, strongmodal, weakmodal and constraining using the MCDonald wordlist.
+6. The words were mapped as negative, positive, litigious, uncertain, strongmodal, weakmodal and constraining using the MCDonald wordlist. The list can be found <a href='https://drive.google.com/file/d/15UPaF2xJLSVz8DYuphierz67trCxFLcl/view?usp=sharing'>Here</a>
 7. These results were then stored into the google storage buckets following the heirachy of the folder structure.
 
 
 Below is the process flow
 
-<img src="https://github.com/kashishshah881/data-pipeline/blob/master/img2.png" width="1000">
+<img src="https://github.com/kashishshah881/data-pipeline/blob/master/img2.png" width="300" position='center'>
 
 ## Getting Started
 
