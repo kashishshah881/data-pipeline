@@ -3,16 +3,21 @@
 
 <img src="https://github.com/kashishshah881/data-pipeline/blob/master/img1.jpeg" width="1000">
 
-The main motto of this project is to scrape data using Google Cloud DataFlow and Apache Beam.
+
+The aim of the project is to create a data pipeline for scraping and computing the word counts from various lists of EDGAR data.
+
+1. Google Dataflow is used to build the pipeline. 
+2. Beautiful soup and Regular expressions are used to scrape and clean the data (i.e remove stopwords, symbols etc) from the EDGAR Website.
+3. Apache beam and NLTK tokenizer was used for tokenizing these files.
+4. The model was implemented in two phases, one on the local system using default runner,Direct Runner and the other on the google cloud platform using DataFlow runner.
+5. The data has been treated as batch data (since apache beam can accomodate both batch and stream data) which was stored in the PCollections and then used Trandform function of teh Apache beam for manipulation. 
+6. The words were mapped as negative, positive, litigious, uncertain, strongmodal, weakmodal and constraining using the MCDonald wordlist.
+7. These results were then stored into the google storage buckets following the heirachy of the folder structure.
 
 
-### Result:
+Below is the process flow
 
-The **5 Day Rolling Mean of Adjacent Close** has the most effect on the next day adjacent close stock price by **18%**
-
-The Image at the start gives the returns based on **5 Day Rolling Mean of Adjacent Close**
-
-
+<img src="https://github.com/kashishshah881/data-pipeline/blob/master/img2.png" width="1000">
 
 ## Getting Started
 
@@ -38,7 +43,7 @@ NLTK
 
 Run These Commands on the terminal
 ```
-pip3 install apache-beam nltk google-cloud-storage
+pip3 install apache-beam nltk google-cloud-storage apache-beam[gcp]
 ```
 
 ### Setup For Running in Google Cloud DataFlow
@@ -50,16 +55,9 @@ Test If you have adequate access writes to your Bucket by running the example sh
 ##### Step 3
 Spin up a Google VM Instance <a href='https://console.cloud.google.com/compute/instances'> Here </a> with minimum configuration since DataFlow is a managed service, it handles the resources part.
 ##### Step 4
-> Configure file <a href="https://github.com/kashishshah881/data-pipeline/blob/master/main.py">`main.py`</a> from lines 26 to 29 according to your google credentials. Also enter the bucket location 
-
-
-
-
-
-
-
+> Configure file <a href="https://github.com/kashishshah881/data-pipeline/blob/master/main.py">`main.py`</a> from lines 26 to 29 according to your google credentials. Also enter the bucket location in lines 324 to 331 in <a href="https://github.com/kashishshah881/data-pipeline/blob/master/main.py">`main.py`</a>
+##### Step 5
 Once Everything is installed successfully the below command inside the repository folder
-
 ```
 python3 main.py
 ```
@@ -69,6 +67,9 @@ python3 main.py
 ## Authors
 
 * **[Kashish Shah](www.kashishshah.com)**
+* **[Dhruv Panchal](www.linkedin.com/in/panchaldhruv)**
+* **[Manogna Mantripragada](www.linkedin.com/in/manogna-mantripragada)**
+
 
 
 ## License
