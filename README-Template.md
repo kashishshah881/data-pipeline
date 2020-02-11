@@ -13,7 +13,7 @@ The aim of the project is to create a data pipeline for scraping and computing t
 
 Below is the process flow
 
-<img src="https://drive.google.com/drive/u/2/my-drive">
+<img style="align:center" src="https://drive.google.com/drive/u/2/my-drive">
 
 
 
