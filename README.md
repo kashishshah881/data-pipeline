@@ -66,7 +66,7 @@ python3 main.py
 
 ## Authors
 
-* **[Kashish Shah](www.kashishshah.com)**
+* **[Kashish Shah](http://www.kashishshah.com)**
 * **[Dhruv Panchal](www.linkedin.com/in/panchaldhruv)**
 * **[Manogna Mantripragada](www.linkedin.com/in/manogna-mantripragada)**
 
