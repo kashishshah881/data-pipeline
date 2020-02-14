@@ -67,8 +67,8 @@ python3 main.py
 ## Authors
 
 * **[Kashish Shah](http://www.kashishshah.com)**
-* **[Dhruv Panchal](www.linkedin.com/in/panchaldhruv)**
-* **[Manogna Mantripragada](www.linkedin.com/in/manogna-mantripragada)**
+* **[Dhruv Panchal](http://www.linkedin.com/in/panchaldhruv)**
+* **[Manogna Mantripragada](http://www.linkedin.com/in/manogna-mantripragada)**
 
 
 
